@@ -1,0 +1,50 @@
+Ques 1 Link: https://www.geeksforgeeks.org/problems/missing-number-in-array1416/1?page=1&category=Arrays&status=solved&sortBy=submissions
+
+------------------------------------Ques--------------------------------------------------------
+Missing in Array
+Difficulty: EasyAccuracy: 29.59%Submissions: 1.2MPoints: 2
+Given an array arr of size n−1 that contains distinct integers in the range of 1 to n (inclusive), find the missing element. The array is a permutation of size n with one element missing. Return the missing element.
+-------------------------------Solution---------------------------------------------------------
+
+class Solution {
+
+    // Note that the size of the array is n-1
+    int missingNumber(int n, int arr[]) {
+
+        int sum=0;
+        for(int i=0;i<arr.length;i++){
+            sum=sum+arr[i];
+        }
+        int sum2=0;
+        for(int i=1;i<=n;i++){
+            sum2=sum2+i;
+        }
+        
+        return sum2-sum;
+    }
+}
+
+
+
+Ques 2 Link: https://www.geeksforgeeks.org/problems/reverse-a-string/1?page=1&category=Strings&sortBy=submissions
+---------------------------------------Ques-----------------------------------------------------
+Reverse a String
+Difficulty: BasicAccuracy: 69.49%Submissions: 368K+Points: 1
+You are given a string s. You need to reverse the string.
+
+------------------------------------------Answer--------------------------------------------------
+class Reverse
+{
+    // Complete the function
+    // str: input string
+    public static String reverseWord(String str)
+    {
+       String rev="";
+       for(int i=str.length()-1;i>=0;i--){
+           rev=rev+str.charAt(i);
+           
+       }
+       return rev;
+            
+    }
+}
